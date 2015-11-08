@@ -90,7 +90,7 @@ namespace RCms.Business.Services.Common
 
         public IImageContainer UploadImage(UploadImageModel model, System.Web.HttpPostedFile postedFile)
         {
-            var user = _userService.GetCurrentUserNameBase64();
+            var user = _userService.GetCurrentUserId();
             var userImage = new UserImage()
             {
                 UserImageType = model.UserImageType,

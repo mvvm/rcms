@@ -8,8 +8,6 @@ namespace RCms.Business.Services.Common
 {
     public interface IUserService
     {
-        string GetCurrentUserName();
-        string GetCurrentUserNameBase64();
-        bool HaveAccess();
+        string GetCurrentUserId();
     }
 }

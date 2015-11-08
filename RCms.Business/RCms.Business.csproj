@@ -135,7 +135,6 @@
     <Compile Include="Services\Common\IImageUploadService.cs" />
     <Compile Include="Services\Common\ImageUploadService.cs" />
     <Compile Include="Services\Common\IUserFileService.cs" />
-    <Compile Include="Services\Common\UserService.cs" />
     <Compile Include="Services\Common\IUserService.cs" />
     <Compile Include="Services\Common\UserFileService.cs" />
   </ItemGroup>

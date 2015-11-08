@@ -60,7 +60,7 @@ namespace RCms.Business.Services.Common
 
         public UserFile StoreFile(HttpPostedFile file)
         {
-            var userNameBase64 = _userService.GetCurrentUserNameBase64();
+            var userNameBase64 = _userService.GetCurrentUserId();
             byte[] fileData;
             string hash;
             // convert file to byte array and calculate hash of content
@@ -78,7 +78,7 @@ namespace RCms.Business.Services.Common
             
             // upload file in Azure
             var container = GetFileStorageContainer();
-            var blockBlob = container.GetBlockBlobReference(ConvertBlobNameToStoreInAzure(_userService.GetCurrentUserNameBase64(), hash, file.FileName));
+            var blockBlob = container.GetBlockBlobReference(ConvertBlobNameToStoreInAzure(_userService.GetCurrentUserId(), hash, file.FileName));
             blockBlob.UploadFromByteArray(fileData, 0, fileData.Length);
             var uri = blockBlob.Uri;
 

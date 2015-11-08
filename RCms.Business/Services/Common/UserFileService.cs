@@ -29,7 +29,7 @@ namespace RCms.Business.Services.Common
                 RelativePath = relativePath,
                 Size = size,
                 CreatedDate = DateTime.UtcNow,
-                CreatedBy = _userService.GetCurrentUserName(),
+                CreatedBy = _userService.GetCurrentUserId(),
                 AbsoluteBlobPath = RcConfiguration.Common.BlobEndpointUrl + relativePath,
                 AbsolutePath = RcConfiguration.Common.CdnEndpointUrl + relativePath
             };
